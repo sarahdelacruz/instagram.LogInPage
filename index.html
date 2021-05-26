@@ -1,0 +1,235 @@
+<!-- REACT DEVELOPMENT -->
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram</title>
+<!-- React CDN -->
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<!-- React DOM -->
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<!-- Babel Library -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+<style>
+    @import url('http://fonts.cdnfonts.com/css/billabong');
+    body{
+        background-color: #fafafa;
+        align-items: center;
+        text-align: center;
+    }
+    .instaPic{
+        margin-right: 30%;
+        margin-top: -37%;
+        height: 79%;
+    }
+    .container{
+        margin-left: 50%;
+        margin-top: 5%;
+        text-align: center;
+        background-color:white;
+        width: 23%;
+        border-style: solid;
+        border-width: thin;
+        border-color:#D4D4D4;
+    }
+    .container2{
+        margin-left: 50%;
+        margin-top: 0.8%;
+        text-align: center;
+        background-color:white;
+        width: 23%;
+        border-style: solid;
+        border-width: thin;
+        border-color:#D4D4D4;
+    }
+    .header{
+        padding: 30px 20px;
+    }
+    .h1{
+        width:53%
+    }
+    
+    .uname, .pword{
+        padding-left: 12px;
+        border-width: thin;
+        border-color:#D4D4D4;
+        border-radius: 4px;
+        background-color: #fafafa;
+        width: 75%;
+        height: 5%;
+        margin-bottom: 2%;
+    }
+    ::placeholder{
+        color:#a09d9d;
+        font-size: 12px;
+    }
+        :focus::placeholder{
+            color:#a7a7a7;
+            font-size: 10px;
+            transform: translateY(-10px);
+        }
+    .loginButton{
+        margin-top: 2%;
+        background-color: #B8E2F2;
+        width: 75%;
+        height: 3.9%;
+        border: none;
+        font-weight: bold;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+        .loginButton:active{
+            background:	#e1f1fd;
+        }
+    .option{
+        margin-top: 5%;
+        color:gray;
+        font-family:Myanmar Text;
+        font-size: 13px;
+        position: relative;
+    }
+        .option::before{
+            position:absolute;
+            content: '';
+            width: 29%;
+            height: 1.5px;
+            background: #D4D4D4;
+            left: 50px;
+            top: 40%;
+        }
+        .option::after{
+            position:absolute;
+            content: '';
+            width: 29%;
+            height: 1.5px;
+            background: #D4D4D4;
+            right: 50px;
+            top: 40%;
+        }
+        .fa-facebook {
+             background: #3B5998;
+             color: white;
+             width: 15px;
+        }
+        .fbOption {
+            margin-top:5% ;
+        }
+        .fbOption a{
+            text-decoration: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #00316E;
+        }
+    .forgetPword {
+        margin-top: 5%;
+        margin-bottom: 6%;
+    }
+        .forgetPword a{
+            text-decoration: none;
+            font-family: Myanmar Text;
+            color: #00316E;
+            font-size: 13px;
+        }
+    .signUp{
+        font-family: Myanmar Text;
+        font-size: 14px;
+    }
+        .signUp a{
+            text-decoration: none;
+            color:#259FED;
+            font-weight:bold;
+        }
+    .container3 .note{
+        margin-top: 1.2%;
+        margin-bottom: 1%;
+        font-family:Myanmar Text;
+        font-size: 14px;
+        margin-left: 23%;
+    }
+    .AppStore{
+        margin-left: 23%;
+        width: 8.8%;
+        margin-right: 10px;
+    }
+    .GooglePlay{
+        width: 8.8%;
+    }
+</style>
+</head>
+<body>
+    <!-- React js it is the javascript framework -->
+
+    <!-- REACT CONTENT LOCATION -->
+    <div id="app">React has not rendered yet.</div>
+    <!-- JAVASCRIPT CODE/SYNTAX -->
+    <script type="text/babel">
+    var InstaPic = function(){
+        return(
+            <div>
+                <img src="img/insta.png" class="instaPic"/>
+            </div>
+        )
+    }
+    var LogIn = function(){
+        return(
+            //form
+            <div class="container">
+            <div class="header"><img src="img/instaTitle.png" class="h1"/></div>
+            <div>
+                <input type="text" class="uname" placeholder="Phone number, username, or email"/>
+            </div>
+            <div>
+                <input type="password" class="pword" placeholder="Password"/>
+            </div>
+            <div>
+                <input type="submit" value="Log In" class="loginButton"/>
+            </div>
+            <div class="option">OR</div>
+            <div class="fbOption">
+                <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26state%3D%257B%2522fbLoginKey%2522%253A%252215ur5jc45j7srijieotn666w7za0hw1euipw1c1vkymeh25tm%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252F%2522%257D%26scope%3Demail%26response_type%3Dcode%252Cgranted_scopes%26locale%3Den_US%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D6481d47e-91ca-4fb3-8dac-b5a9b6655f7c%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%252215ur5jc45j7srijieotn666w7za0hw1euipw1c1vkymeh25tm%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252F%2522%257D%23_%3D_&display=page&locale=en_US&pl_dbl=0" ><i class="fa fa-facebook"></i> Log in with Facebook</a>
+            </div>
+            <div class="forgetPword">
+                <a href="https://www.instagram.com/accounts/password/reset/">Forgot password?</a>
+            </div>
+            </div>
+            )
+    }
+    var SignUp = function(){
+        return(
+            <div class="container2">
+            <div class="signUp">
+                <p>Don't have an account?<a href="https://www.instagram.com/accounts/emailsignup/"> Sign up</a></p>
+            </div>
+            </div>
+        )
+    }
+    var GetTheApp = function(){
+        return(
+            <div class="container3">
+                <div class="note">Get the app.</div>
+            <div>
+                <a href="https://apps.apple.com/app/instagram/id389801252?vt=lo"><img src="img/app-store-icon-7.png" class="AppStore" alt="Download on the App Store."/></a>
+                <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb&utm_campaign=loginPage&ig_mid=2441E535-9015-4D85-800D-0F80F1CA93AB&utm_content=lo&utm_medium=badge"><img src="img/GooglePlay.png" class="GooglePlay" alt="Get it on Google Play."/></a>
+            </div>
+            </div>
+        )
+    }
+    
+  ReactDOM.render (
+        <div>
+            <LogIn/>
+            <SignUp/>
+            <GetTheApp/>
+            <InstaPic/>
+        </div>, 
+        //WHERE - div with ID of app
+        document.getElementById('app')
+  );
+    </script>
+</body>
+</html>
